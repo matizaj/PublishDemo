@@ -18,7 +18,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      cd '$(System.DefaultWorkingDirectory)'
+      cd '$(System.DefaultWorkingDirectory)/WebApplication1'
       dir
 - task: DotNetCoreCLI@2
   inputs:
