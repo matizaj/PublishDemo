@@ -30,12 +30,15 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
+    workingDirectory: 'WebApplication1'
 - task: DotNetCoreCLI@2
   displayName: publish
   inputs:
     command: 'publish'
     publishWebProjects: true
+    projects: '**/*.csproj'
     arguments: "-c Release -o $(Build.ArtifactStagingDirectory)/drop"
+    workingDirectory: 'WebApplication1'
     zipAfterPublish: false
 - task: PublishBuildArtifacts@1
   inputs:
