@@ -18,7 +18,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      cd '$(System.DefaultWorkingDirectory)/WebApplication1'
+      cd '$(System.DefaultWorkingDirectory)/PublishDemo'
       dir
 - task: DotNetCoreCLI@2
   inputs:
