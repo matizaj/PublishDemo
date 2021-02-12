@@ -36,7 +36,6 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-    projects: 'WebApplication1.csproj'
     arguments: "-c Release -o $(Build.ArtifactStagingDirectory)/drop"
     workingDirectory: 'WebApplication1'
     zipAfterPublish: false
