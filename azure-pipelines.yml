@@ -18,7 +18,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      cd '$(System.DefaultWorkingDirectory)/PublishDemo'
+      cd '$(System.DefaultWorkingDirectory)'
       dir
 - task: DotNetCoreCLI@2
   inputs:
@@ -36,6 +36,7 @@ steps:
     command: 'publish'
     publishWebProjects: true
     arguments: "-c Release -o $(Build.ArtifactStagingDirectory)/drop"
+    zipAfterPublish: false
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/drop'
