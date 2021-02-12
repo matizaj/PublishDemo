@@ -30,9 +30,9 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/PublishDemo/WebAplication1'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/WebAplication1'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
-    workingDirectory: '$(System.DefaultWorkingDirectory)/PublishDemo/WebAplication1'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/WebAplication1'
