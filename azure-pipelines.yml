@@ -36,3 +36,7 @@ steps:
     command: 'publish'
     publishWebProjects: true
     arguments: "-c Release -o $(Build.ArtifactStagingDirectory)/drop"
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/drop'
+  displayName: "Publish drop"
