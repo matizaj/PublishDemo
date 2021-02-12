@@ -30,7 +30,6 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/WebAplication1'
 - task: DotNetCoreCLI@2
   displayName: publish
   inputs:
