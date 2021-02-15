@@ -21,3 +21,4 @@ steps:
     project: 'PublishDemo'
     pipeline: 'matizaj.PublishDemo'
     runVersion: 'latest'
+    targetPath: '$(System.DefaultWorkingDirectory)/resources'
