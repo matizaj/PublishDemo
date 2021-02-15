@@ -15,10 +15,13 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DownloadPipelineArtifact@2
+- task: DownloadBuildArtifacts@0
+  displayName: 'Download Build Artifacts'
   inputs:
-    source: 'specific'
-    project: 'PublishDemo'
-    pipeline: 'matizaj.PublishDemo'
-    runVersion: 'latest'
-    targetPath: '$(System.DefaultWorkingDirectory)/resources'
+        buildType: specific
+        project: 'PublishDemo'
+        pipeline: 'matizaj.PublishDemo'
+        buildVersionToDownload: 'specific'
+        buildId: "latest"
+        artifactName: 'drop'
+        downloadPath: '$(System.DefaultWorkingDirectory)/_PublishDemo'
