@@ -15,7 +15,7 @@ steps:
   inputs:
     buildType: 'specific'
     project: 'PublishDemo'
-    buildId: '$(ArtifactBuildId)'
     pipeline: "$(ArtifactBuildDefinitionId)"
+    buildVersionToDownload: 'latest'
     artifactName: 'drop'
-    downloadPath: '$(System.ArtifactsDirectory)/down'
+    downloadPath: '$(System.DefaultWorkingDirectory)/down'
