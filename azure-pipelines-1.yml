@@ -20,7 +20,7 @@ steps:
   inputs:
         buildType: specific
         project: 'PublishDemo'
-        pipeline: 'matizaj.PublishDemo'
+        pipeline: "$(ArtifactBuildDefinitionId)"
         buildVersionToDownload: 'specific'
         buildId: "$(ArtifactBuildId)"
         artifactName: 'drop'
