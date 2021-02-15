@@ -23,10 +23,7 @@ steps:
 - task: DownloadBuildArtifacts@0
   displayName: 'Download Build Artifacts'
   inputs:
-        buildType: specific
-        project: 'PublishDemo'
-        pipeline: "$(ArtifactBuildDefinitionId)"
-        buildVersionToDownload: 'specific'
-        buildId: "$(ArtifactBuildId)"
-        artifactName: 'drop'
-        downloadPath: '$(System.DefaultWorkingDirectory)/_PublishDemo'
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'drop'
+    downloadPath: '$(System.ArtifactsDirectory)'
