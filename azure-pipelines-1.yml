@@ -15,6 +15,7 @@ steps:
   inputs:
     buildType: 'specific'
     project: 'PublishDemo'
+    pipeline: 'matizaj.PublishDemo'
     buildVersionToDownload: 'latest'
     artifactName: 'drop'
     downloadPath: '$(System.DefaultWorkingDirectory)/down'
