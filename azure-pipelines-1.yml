@@ -22,6 +22,6 @@ steps:
         project: 'PublishDemo'
         pipeline: 'matizaj.PublishDemo'
         buildVersionToDownload: 'specific'
-        buildId: "latest"
+        buildId: "$(ArtifactBuildId)"
         artifactName: 'drop'
         downloadPath: '$(System.DefaultWorkingDirectory)/_PublishDemo'
