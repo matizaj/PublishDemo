@@ -9,11 +9,7 @@ pool:
 
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo $(ArtifactBuildId)"
-      echo $(ArtifactBuildDefinitionId)
+
 - task: DownloadBuildArtifacts@0
   displayName: 'Download Build Artifacts'
   inputs:
