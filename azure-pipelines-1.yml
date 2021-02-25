@@ -7,9 +7,15 @@
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+- group: 'mygroup'
+
 
 steps:
-
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo $(name)
 - task: DownloadBuildArtifacts@0
   displayName: 'Download Build Artifacts'
   inputs:
