@@ -16,9 +16,13 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+
 - task: CmdLine@2
   inputs:
-    script: '$(System.DefaultWorkingDirectory)'
+    script: |
+      echo Write your commands here
+      
+      echo $(System.DefaultWorkingDirectory)
 - task: UniversalPackages@0
   inputs:
     command: 'download'
